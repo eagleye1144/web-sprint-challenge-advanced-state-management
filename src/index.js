@@ -10,7 +10,8 @@ import reducer from './reducers/index';
 
 
 const store = createStore(reducer, applyMiddleware(logger, thunk));
-
+const { worker } = require('./mocks/browser');
+worker.start();
 
 
 const rootElement = document.getElementById("root");
